@@ -1,0 +1,165 @@
+// Tablets and smaller devices
+@media (max-width: 835px) {
+ #header-home {
+    height: 30rem;
+   img {
+    width: 150px;
+    height: 150px;
+   }
+   .header-content {
+    h1 {
+      font-size: 1.8rem;
+    }
+    h2 {
+      font-size: 1.3rem;
+      margin-top: 10px;
+    }
+    h3 {
+      font-size: 1rem;
+    }
+   }
+}
+
+  #igrice {
+    .container {
+      h1 {
+        font-size: 2.5rem;
+      }
+    }
+  .item-image {
+    height: 40vh;
+    margin-bottom: 10px;
+  }
+  }
+
+  #cene {
+   .section-title {
+    font-size: 2.5rem;
+   }
+}
+}
+
+
+// Mobile devices (phones, portrait)
+@media (max-width: 600px) {
+
+  #igrice {
+  .items {
+    grid-template-columns: 1fr !important;
+  }
+  .item {
+    &-image {
+      height: 120vh;
+    }
+  }
+}
+  #header-home {
+    height: 42rem;
+    background: url(img/back21.png) no-repeat center center/cover;
+    #main-nav {
+      flex-direction: column;
+      align-items: center;
+      height: auto;
+
+      li {
+        font-size: 12px;
+        padding-left: 10px;
+      }
+    }
+    img {
+      width: 140px;
+      height: 140px;
+      margin-bottom: -20px;
+    }
+
+    .header-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 20px;
+
+
+      h1 {
+        font-size: 1.7rem;
+        text-align: center;
+      }
+      h2 {
+        font-size: 1.4rem;
+        margin-top: 15px;
+      }
+      h3 {
+        font-size: 1.1rem;
+        margin-bottom: -60px;
+      }
+      img {
+        width: 150vw;
+        max-width: 150vw;
+        height: auto;
+        object-fit: contain; // or 'cover' if you want it to fill the box
+        display: block;
+        
+        }
+      }
+    }
+
+      #igrice {
+    .container {
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  .item-image {
+    height: 50vh;
+    margin-bottom: 10px;
+  }
+  }
+
+  #cene {
+   .section-title {
+    font-size: 2rem;
+   }
+}
+
+#kontakt {
+  &-a {
+    .section-title {
+      font-size: 1.8rem;
+    }
+      .text-fields {
+        grid-template-areas: 
+        'name'
+        'subject'
+        'email'
+        'phone'
+        'message';
+      }
+  }
+
+    &-b {
+      div {
+        grid-template-columns: 1fr !important;
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px #555 solid;
+
+        &:last-child {
+          border: none;
+          margin-bottom: 0;
+          padding-bottom: 0;
+        }
+      }
+    }
+}
+#main-footer {
+    height: 7rem;
+
+    .footer-content {
+      flex-direction: column;
+      padding: 1rem;
+      height: 5rem;
+    }
+  }
+  }
+

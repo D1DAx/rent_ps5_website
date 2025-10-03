@@ -1,0 +1,407 @@
+@import 'config';
+@import 'utilities';
+@import 'item_grid';
+// General Styles
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Orbitron", sans-serif;
+  line-height: 1.6;
+  background: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: $dark-color;
+}
+
+ul {
+  list-style: none;
+}
+
+h2,
+h3,
+h4 {
+  text-transform: uppercase;
+}
+
+img {
+  width: 100%;
+}
+
+// Logo
+#logo {
+  width: 225px;
+  height: 225px;
+  color: #fff;
+  text-transform: uppercase;
+  
+}
+
+// Main Nav
+#main-nav {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+
+  ul {
+    display: flex;
+  }
+
+  li {
+    padding: 2rem 1.5rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    border-bottom: 3px transparent solid;
+    // The reason we are doing transparent is to a have a hover effect, if we dont use it it pushes the text upwards
+    padding-bottom: 0.5rem;
+    transition: border-color 0.5s;
+
+    &:hover {
+      border-color: $medium-color;
+    }
+
+    &.current {
+      border-color: $main-color;
+    }
+  }
+}
+
+// Header
+#header {
+  &-home {
+    // Header Home
+    background: $bg-image no-repeat center center/cover;
+    height: 100vh;
+    color: #fff;
+
+    // Header Content
+    .header-content {
+      img {
+        display: none;
+      }
+      text-align: right;
+      padding-top: -100px;
+
+
+      h1 {
+        font-size: 3.5rem;
+        line-height: 1.3;
+      }
+    }
+
+    // PS5 Image
+    .ps5-image {
+      display: none;
+    }
+  }
+}
+
+#o-nama {
+  padding: 80px 20px;
+  
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  p {
+    line-height: 1.6;
+    margin-top: 30px;
+    text-align: left;
+  }
+}
+
+#igrice {
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto; }
+
+  .section-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+.bottom-line {
+    width: 80px;
+    height: 4px;
+    background: #b387ff;  // Ljubičasta
+    margin: -10px auto 60px auto;
+  }
+
+    .bottom-line {
+    margin-bottom: 40px;
+  }
+
+  p {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+}
+
+// Cene
+#cene {
+    padding: 80px 20px;
+    background: #0a0e1a;
+    
+    .content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    .section-title {
+        font-family: 'Orbitron', sans-serif;
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #ffffff;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+    
+    .bottom-line {
+        width: 80px;
+        height: 4px;
+        background: #b387ff;  // Ljubičasta
+        margin: -10px auto 60px auto;
+    }
+    
+    .pricing-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+    }
+    
+    .pricing-card {
+        background: linear-gradient(135deg, #2a1a4a 0%, #3d2666 100%);  // Ljubičasti gradijent
+        border-radius: 15px;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        
+        &:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(179, 135, 255, 0.3);  // Ljubičasta senka
+        }
+        
+        // Featured kartica (srednja)
+        &.featured {
+            transform: scale(1.05);
+            box-shadow: 0 10px 40px rgba(179, 135, 255, 0.4);
+            
+            .card-header {
+                background: linear-gradient(135deg, #b387ff 0%, #9966ff 100%);  // Svetlija ljubičasta
+            }
+            
+            &:hover {
+                transform: scale(1.05) translateY(-10px);
+            }
+        }
+    }
+    
+    .card-header {
+        background: linear-gradient(135deg, #3d2666 0%, #4d3377 100%);  // Ljubičasti header
+        padding: 30px 20px;
+        
+        h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2rem;
+            color: #ffffff;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+    }
+    
+    .features-list {
+        list-style: none;
+        padding: 30px 20px;
+        margin: 0;
+        
+        li {
+            font-family: 'Poppins', sans-serif;
+            color: #e0e0e0;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(179, 135, 255, 0.2);  // Ljubičasti border
+            font-size: 0.95rem;
+            
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+    
+    .price {
+        padding: 30px 20px;
+        background: rgba(0, 0, 0, 0.3);
+        
+        .amount {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: #ffffff;
+            display: block;
+            line-height: 1;
+        }
+        
+        .currency {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.9rem;
+            color: #b387ff;  // Ljubičasta
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 5px;
+            display: block;
+        }
+    }
+    
+    .cta-button {
+        display: block;
+        background: #b387ff;  // Ljubičasto dugme
+        color: #ffffff;
+        padding: 15px 30px;
+        margin: 0 20px 30px 20px;
+        border-radius: 30px;
+        text-decoration: none;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        font-size: 1.1rem;
+        transition: background 0.3s ease, transform 0.3s ease;
+        
+        &:hover {
+            background: #9966ff;  // Tamnija ljubičasta na hover
+            transform: scale(1.05);
+        }
+        
+        i {
+            margin-right: 10px;
+        }
+    }
+}
+
+// Kontakt
+#kontakt {
+  &-a {
+    h3 {
+      margin: 15px 0 30px 0;
+    }
+    .text-fields {
+      display: grid;
+      grid-template-areas: 
+      'name email'
+      'subject phone'
+      'message message'; 
+      gap: 1.2rem;
+      margin-bottom: 1.2rem;
+
+      // Grid Areas
+      .name-input {
+        grid-area: name;
+      }
+      .subject-input {
+        grid-area: subject;
+      }
+      .email-input {
+        grid-area: email;
+      }
+      .phone-input {
+        grid-area: phone;
+      }
+      .message-input {
+        grid-area: message;
+        height: 100px;
+      }
+
+      .text-input {
+        padding: 0.5rem 1rem;
+      }
+    }
+    button[type='submit'] {
+      width: 50%;
+    }
+  } 
+
+  &-b {
+    .contact-info {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      text-align: center;
+    }
+  }
+
+  &-c {
+    h1 {
+      font-size: 3rem;
+    }
+  }
+}
+
+// Footer
+#main-footer {
+  color: #fff;
+  height: 5rem;
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    height: 5rem;
+    align-items: center;
+
+  .social .fab,
+  .social .fa-solid {
+    margin-right: 1rem;
+    border: 2px #fff solid;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    line-height: 20px;
+    text-align: center;
+    padding: 0.5rem;
+    
+
+    a {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #fff !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $main-color !important;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+    }
+
+    i {
+      color: #fff !important; 
+    }
+
+    &:hover {
+      background: $main-color;
+      color: #ffffff;
+      transform: translateY(-5px);
+    }
+  }
+
+  .social a i {
+    color: #fff !important;
+  }
+}
+}
+
+// import media queries
+@import 'media';
+
