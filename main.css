@@ -131,8 +131,8 @@ strong {
 .item {
   position: relative;
   background: #b387ff;
+  overflow: hidden;
   margin: 5px;
-  padding: 5px;
 }
 .item::after {
   content: "";
@@ -167,6 +167,7 @@ strong {
   content: "";
   display: block;
   padding-top: 75%;
+  overflow: hidden;
 }
 .item-image img {
   position: absolute;
@@ -175,7 +176,7 @@ strong {
   width: 100%;
   height: 100%;
   line-height: 0;
-  object-fit: contain;
+  object-fit: cover;
 }
 .item-text {
   position: absolute;
