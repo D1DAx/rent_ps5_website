@@ -402,6 +402,63 @@ img {
 }
 }
 
+// Hamburger Menu
+.menu-btn {
+  position: relative;
+  display: none;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  z-index: 1000;
+  
+  * {
+    box-sizing: border-box;
+  }
+
+  &__burger {
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    &::before,
+    &::after {
+      content: '' !important;
+      width: 30px;
+      height: 3px;
+      background: #fff;
+      position: absolute;
+      left: 0;
+      transition: all 0.3s;
+    }
+
+    &::before {
+      top: -10px;
+    }
+
+    &::after {
+      top: 10px;
+    }
+  }
+
+  &.active &__burger {
+    background: transparent;
+
+    &::before {
+      top: 0;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      top: 0;
+      transform: rotate(-45deg);
+    }
+  }
+}
+
 // import media queries
 @import 'media';
 
