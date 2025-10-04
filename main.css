@@ -694,7 +694,7 @@ img {
     grid-template-columns: 1fr !important;
   }
   #igrice .item-image {
-    height: auto;
+    height: 75vh;
   }
   #igrice .container h1 {
     font-size: 2rem;
